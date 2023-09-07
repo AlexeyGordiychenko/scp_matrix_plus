@@ -21,13 +21,9 @@ LIB=s21_matrix_oop.a
 TEST=test
 TEST_BUILD=test_build
 
-.PHONY: all $(TEST) $(TEST_BUILD) $(LIB) gcov_report clean clean_gcda rebuild clang_n clang_i valgrind valgrind_macos
+.PHONY: all $(TEST) $(TEST_BUILD) $(LIB) gcov_report clean clean_gcda rebuild clang_n clang_i valgrind valgrind_mac
 
 all: $(LIB)
-
-#DELETE
-main: main.cc $(LIB)
-	$(CC) $(CFLAGS) $^ -o $@
 
 $(TEST_BUILD): $(OBJS_GCOV) $(OBJS_TEST)
 	$(CC) $(CFLAGS) $^ $(LDFLAGS) $(GCOVFLAGS) -o $(TEST)
