@@ -1,7 +1,7 @@
-#include "s21_matrix_oop_tests.h"
+#include "scp_matrix_oop_tests.h"
 
 TEST(Mutators, 0) {
-  S21Matrix m1({6,
+  SCPMatrix m1({6,
                 6,
                 -0.14843110457804876,
                 -1180.9164648772007,
@@ -39,7 +39,7 @@ TEST(Mutators, 0) {
                 -617.2024392645218,
                 973.0523395585559,
                 -93943.21897579283});
-  S21Matrix m1_res({11,
+  SCPMatrix m1_res({11,
                     5,
                     -0.14843110457804876,
                     -1180.9164648772007,
@@ -103,11 +103,11 @@ TEST(Mutators, 0) {
 }
 
 TEST(Mutators, 1) {
-  S21Matrix m1({3, 3, 844594.8447302084, 1892019047.4503596,
+  SCPMatrix m1({3, 3, 844594.8447302084, 1892019047.4503596,
                 -2464290.9168441496, 57819527.12627928, 975.5660877653007,
                 -63020632.04216852, -648698.3885664422, 8823.094764342815,
                 -153224.07723598674});
-  S21Matrix m1_res({3, 3, 844594.8447302084, 1892019047.4503596,
+  SCPMatrix m1_res({3, 3, 844594.8447302084, 1892019047.4503596,
                     -2464290.9168441496, 57819527.12627928, 975.5660877653007,
                     -63020632.04216852, -648698.3885664422, 8823.094764342815,
                     -153224.07723598674});
@@ -118,7 +118,7 @@ TEST(Mutators, 1) {
 }
 
 TEST(Mutators, 2) {
-  S21Matrix m1({7,
+  SCPMatrix m1({7,
                 7,
                 0.8869366907093454,
                 0.2994455115994482,
@@ -169,7 +169,7 @@ TEST(Mutators, 2) {
                 85186.37161107404,
                 -9797769.302890878,
                 966141.7782171051});
-  S21Matrix m1_res({11,
+  SCPMatrix m1_res({11,
                     3,
                     0.8869366907093454,
                     0.2994455115994482,
@@ -211,7 +211,7 @@ TEST(Mutators, 2) {
 }
 
 TEST(Mutators, 3) {
-  S21Matrix m1({7,
+  SCPMatrix m1({7,
                 8,
                 7868935869.253254,
                 -887.5927866980578,
@@ -269,7 +269,7 @@ TEST(Mutators, 3) {
                 -0.9215471535977825,
                 0.5150901815639488,
                 6.844999516088656});
-  S21Matrix m1_res({7,
+  SCPMatrix m1_res({7,
                     3,
                     7868935869.253254,
                     -887.5927866980578,
@@ -299,8 +299,8 @@ TEST(Mutators, 3) {
 }
 
 TEST(Mutators, 4) {
-  S21Matrix m1({1, 1, -1617807.8289370602});
-  S21Matrix m1_res({1, 1, -1617807.8289370602});
+  SCPMatrix m1({1, 1, -1617807.8289370602});
+  SCPMatrix m1_res({1, 1, -1617807.8289370602});
 
   m1.SetRows(1);
   m1.SetCols(1);
@@ -308,13 +308,13 @@ TEST(Mutators, 4) {
 }
 
 TEST(Mutators, 5) {
-  S21Matrix m1({4, 4, -24.37215094086439, 2030076.9696891196, 861381.3488097747,
+  SCPMatrix m1({4, 4, -24.37215094086439, 2030076.9696891196, 861381.3488097747,
                 -887212.4833383776, 35.25066449627481, 25.264017198189936,
                 0.6514017177803256, 0.9312745372558089, -53347148.55521748,
                 675431382.8244785, 20668424.89951882, 9.908556309796117,
                 81.7029848945772, 4155852826.85441, 24.838624553901223,
                 -74.89921409248065});
-  S21Matrix m1_res({4,
+  SCPMatrix m1_res({4,
                     7,
                     -24.37215094086439,
                     2030076.9696891196,
@@ -351,7 +351,7 @@ TEST(Mutators, 5) {
 }
 
 TEST(Mutators, 6) {
-  S21Matrix m1({7,
+  SCPMatrix m1({7,
                 7,
                 10.169227171681527,
                 -966785.9358363695,
@@ -402,7 +402,7 @@ TEST(Mutators, 6) {
                 -639354.5510900151,
                 -9763.940534525607,
                 -0.6196249042981816});
-  S21Matrix m1_res({12,
+  SCPMatrix m1_res({12,
                     2,
                     10.169227171681527,
                     -966785.9358363695,
@@ -435,8 +435,8 @@ TEST(Mutators, 6) {
 }
 
 TEST(Mutators, 7) {
-  S21Matrix m1({1, 1, -56919508.42018362});
-  S21Matrix m1_res({1, 1, -56919508.42018362});
+  SCPMatrix m1({1, 1, -56919508.42018362});
+  SCPMatrix m1_res({1, 1, -56919508.42018362});
 
   m1.SetRows(1);
   m1.SetCols(1);
@@ -444,13 +444,13 @@ TEST(Mutators, 7) {
 }
 
 TEST(Mutators, 8) {
-  S21Matrix m1({4, 4, -663.6337604932435, 581941317.7696437, -99388859.00223368,
+  SCPMatrix m1({4, 4, -663.6337604932435, 581941317.7696437, -99388859.00223368,
                 9872586556.659508, -0.2745961302668639, 182271223.55366087,
                 9431512631.445509, -37712588.25536947, 9368.176027698095,
                 -0.5324822465835025, 439333.10242999124, -278841.6409951282,
                 -84054146.30642968, -3.159158381866204, -44540.90070761632,
                 483589.39478622685});
-  S21Matrix m1_res({4, 4, -663.6337604932435, 581941317.7696437,
+  SCPMatrix m1_res({4, 4, -663.6337604932435, 581941317.7696437,
                     -99388859.00223368, 9872586556.659508, -0.2745961302668639,
                     182271223.55366087, 9431512631.445509, -37712588.25536947,
                     9368.176027698095, -0.5324822465835025, 439333.10242999124,
@@ -463,7 +463,7 @@ TEST(Mutators, 8) {
 }
 
 TEST(Mutators, 9) {
-  S21Matrix m1({6,
+  SCPMatrix m1({6,
                 6,
                 4574.532991841202,
                 -7839437365.696744,
@@ -501,7 +501,7 @@ TEST(Mutators, 9) {
                 -0.8816792649321147,
                 419.8602428956332,
                 -185.64007046355724});
-  S21Matrix m1_res({6,
+  SCPMatrix m1_res({6,
                     6,
                     4574.532991841202,
                     -7839437365.696744,
@@ -546,51 +546,51 @@ TEST(Mutators, 9) {
 }
 
 TEST(Mutators, 10) {
-  S21Matrix m1;
+  SCPMatrix m1;
   EXPECT_THROW(m1.SetSize(-1, 5), std::invalid_argument);
 }
 
 TEST(Mutators, 11) {
-  S21Matrix m1;
+  SCPMatrix m1;
   EXPECT_THROW(m1.SetSize(-1, 0), std::invalid_argument);
 }
 
 TEST(Mutators, 12) {
-  S21Matrix m1;
+  SCPMatrix m1;
   EXPECT_THROW(m1.SetSize(-1, -2), std::invalid_argument);
 }
 
 TEST(Mutators, 13) {
-  S21Matrix m1;
+  SCPMatrix m1;
   EXPECT_THROW(m1.SetSize(3, -2), std::invalid_argument);
 }
 
 TEST(Mutators, 14) {
-  S21Matrix m1;
+  SCPMatrix m1;
   EXPECT_THROW(m1.SetSize(0, -2), std::invalid_argument);
 }
 
 TEST(Mutators, 15) {
-  S21Matrix m1;
+  SCPMatrix m1;
   EXPECT_THROW(m1.SetSize(0, 0), std::invalid_argument);
 }
 
 TEST(Mutators, 16) {
-  S21Matrix m1;
+  SCPMatrix m1;
   EXPECT_THROW(m1.SetRows(0), std::invalid_argument);
 }
 
 TEST(Mutators, 17) {
-  S21Matrix m1;
+  SCPMatrix m1;
   EXPECT_THROW(m1.SetRows(-5), std::invalid_argument);
 }
 
 TEST(Mutators, 18) {
-  S21Matrix m1;
+  SCPMatrix m1;
   EXPECT_THROW(m1.SetCols(0), std::invalid_argument);
 }
 
 TEST(Mutators, 19) {
-  S21Matrix m1;
+  SCPMatrix m1;
   EXPECT_THROW(m1.SetCols(-2), std::invalid_argument);
 }

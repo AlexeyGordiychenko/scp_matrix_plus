@@ -1,8 +1,8 @@
-#include "s21_matrix_oop.h"
+#include "scp_matrix_oop.h"
 
-S21Matrix::S21Matrix() : S21Matrix(1, 1) {}
+SCPMatrix::SCPMatrix() : SCPMatrix(1, 1) {}
 
-S21Matrix::S21Matrix(int rows, int cols)
+SCPMatrix::SCPMatrix(int rows, int cols)
     : rows_(rows), cols_(cols), matrix_(nullptr) {
   if (rows_ <= 0 || cols_ <= 0) {
     throw std::invalid_argument(
@@ -11,7 +11,7 @@ S21Matrix::S21Matrix(int rows, int cols)
   AllocateMatrix();
 }
 
-S21Matrix::S21Matrix(std::initializer_list<double> init_list) {
+SCPMatrix::SCPMatrix(std::initializer_list<double> init_list) {
   if (init_list.size() < 2) {
     throw std::invalid_argument(
         "Initializer list must contain at least two elements for rows and "
@@ -33,7 +33,7 @@ S21Matrix::S21Matrix(std::initializer_list<double> init_list) {
   }
 }
 
-S21Matrix::S21Matrix(const S21Matrix& other)
+SCPMatrix::SCPMatrix(const SCPMatrix& other)
     : rows_(other.rows_), cols_(other.cols_) {
   AllocateMatrix();
   for (int i = 0; i < rows_; ++i) {
@@ -41,7 +41,7 @@ S21Matrix::S21Matrix(const S21Matrix& other)
   }
 }
 
-S21Matrix::S21Matrix(S21Matrix&& other) noexcept
+SCPMatrix::SCPMatrix(SCPMatrix&& other) noexcept
     : rows_(other.rows_), cols_(other.cols_), matrix_(other.matrix_) {
   other.rows_ = 0;
   other.cols_ = 0;
@@ -49,19 +49,19 @@ S21Matrix::S21Matrix(S21Matrix&& other) noexcept
 }
 
 // Destructor
-S21Matrix::~S21Matrix() { DestroyMatrix(); }
+SCPMatrix::~SCPMatrix() { DestroyMatrix(); }
 
 // Accessors
 
-int S21Matrix::GetRows() const noexcept { return rows_; }
-int S21Matrix::GetCols() const noexcept { return cols_; }
+int SCPMatrix::GetRows() const noexcept { return rows_; }
+int SCPMatrix::GetCols() const noexcept { return cols_; }
 
 // Mutators
-void S21Matrix::SetRows(int rows) { SetSize(rows, cols_); }
+void SCPMatrix::SetRows(int rows) { SetSize(rows, cols_); }
 
-void S21Matrix::SetCols(int cols) { SetSize(rows_, cols); }
+void SCPMatrix::SetCols(int cols) { SetSize(rows_, cols); }
 
-void S21Matrix::SetSize(int rows, int cols) {
+void SCPMatrix::SetSize(int rows, int cols) {
   if (rows <= 0 || cols <= 0) {
     throw std::invalid_argument(
         "Number of rows and colums must be greater than zero.");
@@ -70,7 +70,7 @@ void S21Matrix::SetSize(int rows, int cols) {
 
   auto min_rows = std::min(this->rows_, rows);
   auto min_cols = std::min(this->cols_, cols);
-  S21Matrix resized_matrix(rows, cols);
+  SCPMatrix resized_matrix(rows, cols);
   for (int i = 0; i < min_rows; i++) {
     std::copy(this->matrix_[i], this->matrix_[i] + min_cols,
               resized_matrix.matrix_[i]);
