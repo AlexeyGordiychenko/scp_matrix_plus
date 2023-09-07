@@ -1,6 +1,6 @@
 #include "s21_matrix_oop.h"
 
-S21Matrix::S21Matrix() : S21Matrix(default_size, default_size) {}
+S21Matrix::S21Matrix() : S21Matrix(1, 1) {}
 
 S21Matrix::S21Matrix(int rows, int cols)
     : rows_(rows), cols_(cols), matrix_(nullptr) {
@@ -32,17 +32,6 @@ S21Matrix::S21Matrix(std::initializer_list<double> init_list) {
     }
   }
 }
-
-// S21Matrix::S21Matrix(int rows, int cols, const double* values)
-//     : rows_(rows), cols_(cols) {
-//   AllocateMatrix();
-
-//   for (auto i = 0; i < rows_; i++) {
-//     for (auto j = 0; j < cols_; j++) {
-//       matrix_[i][j] = values[i * cols_ + j];
-//     }
-//   }
-// }
 
 S21Matrix::S21Matrix(const S21Matrix& other)
     : rows_(other.rows_), cols_(other.cols_) {

@@ -6,6 +6,9 @@
 
 class S21Matrix {
  public:
+  // Const value to compare doubles with the precision up to 7 decimal places
+  static double kEps_;
+
   // CONSTRUCTORS AND THE DESTRUCTOR
   S21Matrix();                                         // default
   S21Matrix(int rows, int cols);                       // parameterized
@@ -68,11 +71,6 @@ class S21Matrix {
   double& operator()(int row, int col) const;
 
  private:
-  // Matrix size for the default constructor
-  static int default_size;
-  // Const value to compare doubles with the precision up to 7 decimal places
-  static const double kEps_;
-
   int rows_, cols_;
   double** matrix_;
 
