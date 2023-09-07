@@ -1,5 +1,8 @@
 # scp_matrix+ (Individual project)
 
+## Score:
+The final score is 100% (max)
+
 ## Task
 Implementation of the scp_matrix_oop.h library.
 
